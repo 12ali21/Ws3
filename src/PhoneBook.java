@@ -68,7 +68,7 @@ public class PhoneBook {
     }
     void printContacts(){
         for (int i = 0; i < currLength; i++) {
-            System.out.print("contact "+i+" Name :"+contacts[i].firstName+" "+ contacts[i].lastName);
+            System.out.print("contact "+(i+1)+" Name :"+contacts[i].firstName+" "+ contacts[i].lastName);
             System.out.print(" PhoneNumber :"+contacts[i].phoneNumber.toString());
             System.out.println(" Address :"+contacts[i].address.toString());
 

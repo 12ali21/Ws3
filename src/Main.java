@@ -59,10 +59,15 @@ public class Main {
 
                 }
             }else if(commands[0].equals("show")){
-                if(commands[1].equals("-g")){
+                if(commands.length == 1){
+                    phoneBook.printContacts();
+                }
+                else if(commands[1].equals("-g")){
                     Contact[] groupContacts=phoneBook.findContacts(commands[2]);
                     for (int i = 0; i < groupContacts.length; i++) {
-                        System.out.print("contact "+i+" Name :"+groupContacts[i].firstName+" "+ groupContacts[i].lastName);
+                        if(groupContacts[i] == null)
+                            break;
+                        System.out.print("contact "+(i+1)+" Name :"+groupContacts[i].firstName+" "+ groupContacts[i].lastName);
                         System.out.print(" PhoneNumber :"+groupContacts[i].phoneNumber.toString());
                         System.out.println(" Address :"+groupContacts[i].address.toString());
                     }
@@ -72,9 +77,9 @@ public class Main {
                     if(unique==null){
                         System.out.println("Not found!!!");
                     }else{
-                        System.out.print("contact "+i+" Name :"+groupContacts[i].firstName+" "+ groupContacts[i].lastName);
-                        System.out.print(" PhoneNumber :"+groupContacts[i].phoneNumber.toString());
-                        System.out.println(" Address :"+groupContacts[i].address.toString());
+                        System.out.print("Name :"+unique.firstName+" "+ unique.lastName);
+                        System.out.print(" PhoneNumber :"+unique.phoneNumber.toString());
+                        System.out.println(" Address :"+unique.address.toString());
                     }
 
                 }

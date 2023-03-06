@@ -6,18 +6,18 @@ public class Main {
 //
 //        PhoneBook phoneBook = new PhoneBook();
 //
-//        String contactGroup;
-//        String contactEmail;
-//        String contactCountryCode;
-//        String contactPhoneNumber;
-//        String contactCountry;
-//        String contactCity;
-//        String contactZipCode;
-//
-//
-//
-//
-//        Scanner scanner = new Scanner(System.in);
+        String contactGroup;
+        String contactEmail;
+        String contactCountryCode;
+        String contactPhoneNumber;
+        String contactCountry;
+        String contactCity;
+        String contactZipCode;
+
+
+
+
+        Scanner scanner = new Scanner(System.in);
 //        while (!exit) {
 //            String command = scanner.nextLine();
 //            String[] commands = command.split(" ");
